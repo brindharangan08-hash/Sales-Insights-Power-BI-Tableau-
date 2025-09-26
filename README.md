@@ -25,7 +25,7 @@ You can open it directly in **Power BI Web/Desktop** or **Tableau Public**.
 ## 🖼️ Dashboard Preview
 
 
-![Dashboard Preview](preview.png)
+![Dashboard Preview](preview.png.png)
 
 ---
 
