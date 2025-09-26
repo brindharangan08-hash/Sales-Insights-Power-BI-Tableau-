@@ -86,7 +86,7 @@ You can open it directly in **Power BI Web/Desktop** or **Tableau Public**.
 ---
 
 ## 📜 License
-MIT License — Free to use for learning & portfolio purposes.
+MIT License © Brindha P — Free to use for learning & portfolio purposes.
 
 ---
 
