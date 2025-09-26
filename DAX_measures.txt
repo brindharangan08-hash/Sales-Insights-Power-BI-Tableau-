@@ -1,0 +1,22 @@
+-- Suggested DAX measures for Power BI
+
+Total Sales = SUM(orders[Sales])
+
+Total Quantity = SUM(orders[Quantity])
+
+Total Profit = SUM(orders[Profit])
+
+Average Order Value = DIVIDE([Total Sales], DISTINCTCOUNT(orders[OrderID]))
+
+Profit Margin % = DIVIDE([Total Profit], [Total Sales], 0)
+
+YTD Sales = TOTALYTD([Total Sales], 'calendar'[Date])
+
+Sales LY = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('calendar'[Date]))
+
+Sales MoM % = 
+VAR Prev = CALCULATE([Total Sales], DATEADD('calendar'[Date], -1, MONTH))
+RETURN DIVIDE([Total Sales] - Prev, Prev)
+
+Top Product by Sales = 
+TOPN(1, SUMMARIZE(products, products[ProductName], "Sales", [Total Sales]), [Sales], DESC)
